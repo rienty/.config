@@ -5,7 +5,7 @@ set certificate_file = ~/.config/neomutt/certificates  # store certs (touch file
 
 # Gmail Account --------------------------------------
 #source "~/.config/neomutt/accounts/myserver"
-source "~/.config/neomutt/accounts/gmail"
+source "~/.config/neomutt/accounts/mail"
 
 # Basic Options --------------------------------------
 set wait_key = no        # shut up, mutt
