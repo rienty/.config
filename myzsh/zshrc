@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # Variable setting
-export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH
+#export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH
+export PATH=/usr/local/texlive/2022/bin/x86_64-linux:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR='nvim'
 export ZSH=$HOME/.config/myzsh
@@ -18,16 +19,16 @@ compinit -u -C -d "${ZSH_COMPDUMP}"
 
 # Add all defined plugins to fpath. This must be done before running compinit.
 for plugin ($plugins); do
-        fpath=($ZSH/plugins/$plugin $fpath)
+	fpath=($ZSH/plugins/$plugin $fpath)
 done
 
 # Load all of the plugins
 plugins=(git sudo colorize fzf zsh-completions zsh-autosuggestions zsh-syntax-highlighting zsh-autopair fzf-tab-completion)
 
 for plugin ($plugins); do
-        if [ -f $ZSH/plugins/$plugin/$plugin.plugin.zsh ]; then
-                source $ZSH/plugins/$plugin/$plugin.plugin.zsh
-        fi
+	if [ -f $ZSH/plugins/$plugin/$plugin.plugin.zsh ]; then
+		source $ZSH/plugins/$plugin/$plugin.plugin.zsh
+	fi
 done
 
 # Load theme
@@ -64,18 +65,19 @@ alias vim="nvim"
 alias mu="proxychains4 neomutt"
 alias ke="sudo loadkeys i386/qwerty/emacs2.map.gz"
 alias nx='bash ~/scripts/nextcloud.sh'
-alias cl='rm -rf ~/.cache ~/.local/share/qutebrowser/webengine/'
+alias lg='lazygit'
+alias cl='rm -rf ~/.cache ~/.local/share/qutebrowser/webengine/Local\ Storage ~/.local/share/qutebrowser/webengine/Service\ Worker ~/.local/share/qutebrowser/webengine/GPUCache ~/.dbus'
 
 # Colorized man
 man() {
-        LESS_TERMCAP_md=$'\e[01;31m' \
-                LESS_TERMCAP_me=$'\e[0m' \
-                LESS_TERMCAP_se=$'\e[0m' \
-                LESS_TERMCAP_so=$'\e[01;44;33m' \
-                LESS_TERMCAP_ue=$'\e[0m' \
-                LESS_TERMCAP_us=$'\e[01;32m' \
-                command man "$@"
-        }
+	LESS_TERMCAP_md=$'\e[01;31m' \
+		LESS_TERMCAP_me=$'\e[0m' \
+		LESS_TERMCAP_se=$'\e[0m' \
+		LESS_TERMCAP_so=$'\e[01;44;33m' \
+		LESS_TERMCAP_ue=$'\e[0m' \
+		LESS_TERMCAP_us=$'\e[01;32m' \
+		command man "$@"
+	}
 
 # Keybinding
 bindkey '^F' vi-forward-char
