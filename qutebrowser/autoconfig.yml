@@ -8,6 +8,8 @@ config_version: 2
 settings:
   content.proxy:
     global: socks://localhost:1080
+  fonts.default_family:
+    global: GohuFont Nerd Font
   fonts.default_size:
     global: 16pt
   tabs.favicons.scale:
