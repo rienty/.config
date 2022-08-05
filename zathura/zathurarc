@@ -13,7 +13,7 @@ set smooth-scroll "true"
 set scroll-full-overlap 0.03
 
 #zoom settings
-set zoom-min 10
+set zoom-min 40
 #set guioptions ""
 
 set selection-clipboard clipboard
@@ -62,14 +62,12 @@ set recolor-lightcolor          "#282828" # bg
 set recolor-darkcolor           "#ebdbb2" # fg
 set recolor                     "true"
 # set recolor-keephue             true      # keep original color
-
-
+set synctex true
+set synctex-editor-command "nvr --remote-silent +%{line} %{input}"
 
 set window-title-basename "true"
 set statusbar-basename "true"
 
 set render-loading "false"
 set scroll-step 50
-#unmap f
-#map f toggle_fullscreen
-#map [fullscreen] f toggle_fullscreen
+

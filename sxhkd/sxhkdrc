@@ -1,0 +1,120 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+ 	st
+
+super + shift + Return
+	~/scripts/st.sh
+
+# program launcher
+super + d
+	~/scripts/dmenu.sh
+
+super + e
+    ~/scripts/dmenu-pdf.sh
+
+super + u
+	~/scripts/dmenu-wifi.sh
+
+super + a
+	~/scripts/backlight-down.sh
+
+super + s
+	~/scripts/backlight-up.sh
+
+super + y
+	~/scripts/clipmenu.sh
+
+super + w
+	~/scripts/dmenu-websearch.sh 
+
+super + r
+	~/scripts/switch.sh
+super + z
+	~/scripts/dmenu-power.sh
+
+super + i
+	~/scripts/dmenu-kill-process.sh 
+
+super + n
+	~/scripts/hidden.sh
+
+super + q
+	pkill -USR1 -x sxhkd
+
+super + shift + c
+	~/scripts/close-tmux.sh
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}
+
+# close and kill
+super + c
+	bspc node -c
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
+
+
+# set the window state
+super + {b,f,v}
+	bspc node -t {tiled,floating,fullscreen}
+
+#
+# focus
+#
+
+# focus the node in the given direction
+super + shift + {j,h,l,k}
+	bspc node -s {west,south,north,east}
+
+# focus the next/previous window in the current desktop
+super + {_,shift + }o
+	bspc node -f {next,prev}.local.!hidden.window
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+super + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# preselect
+#
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+

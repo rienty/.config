@@ -38,4 +38,4 @@ ys_hg_prompt_info() {
 }
 
 PROMPT="
-  %{$terminfo[bold]$fg[orange]%}%~%{$reset_color%}${hg_info}${git_info} %{$terminfo[bold]$fg[blue]%}>> %{$reset_color%}"
+  %{$terminfo[bold]$fg[orange]%}%~%{$reset_color%}${hg_info}${git_info} %{$terminfo[bold]$fg[green]%}>> %{$reset_color%}"

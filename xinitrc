@@ -33,6 +33,6 @@ fi
 
 xrdb ~/.config/Xresources
 
-exec dwm
+#exec dwm
 
-# exec emacs
+exec bspwm

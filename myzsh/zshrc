@@ -67,7 +67,6 @@ alias ke="sudo loadkeys i386/qwerty/emacs2.map.gz"
 alias nx='bash ~/scripts/nextcloud.sh'
 alias lg='lazygit'
 alias cl='rm -rf ~/.cache ~/.local/share/qutebrowser/webengine/Local\ Storage ~/.local/share/qutebrowser/webengine/Service\ Worker ~/.local/share/qutebrowser/webengine/GPUCache ~/.dbus'
-
 # Colorized man
 man() {
 	LESS_TERMCAP_md=$'\e[01;31m' \
