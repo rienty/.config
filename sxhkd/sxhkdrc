@@ -31,7 +31,7 @@ super + y
 super + w
 	~/scripts/dmenu-websearch.sh 
 
-super + r
+super + @space
 	~/scripts/switch.sh
 super + z
 	~/scripts/dmenu-power.sh
