@@ -103,8 +103,8 @@ vim.cmd [[au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe 
 -- Packer init
 require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
-	use 'crusj/bookmarks.nvim'
-	use 'kyazdani42/nvim-web-devicons'
+--	use 'crusj/bookmarks.nvim'
+--	use 'kyazdani42/nvim-web-devicons'
 	use 'phaazon/hop.nvim'
 	use 'nvim-lua/plenary.nvim'
 	use 'lewis6991/gitsigns.nvim'
@@ -163,20 +163,20 @@ require('gitsigns').setup {
 	},
 }
 
---Bookmarks
-require('bookmarks').setup {
-	keymap = {
-		toggle = "<tab><tab>", -- toggle bookmarks
-		add = "\\z", -- add bookmarks
-		jump = "<CR>", -- jump from bookmarks
-		delete = "dd", -- delete bookmarks
-		order = "<space><space>", -- order bookmarks by frequency or updated_time
-	},
-	width = 0.8, -- bookmarks window width:  (0, 1]
-	height = 0.6, -- bookmarks window height: (0, 1]
-	preview_ratio = 0.4, -- bookmarks preview window ratio (0, 1]
-	hl_cursorline = "guibg=Gray guifg=White" -- hl bookmarsk window cursorline
-}
+----Bookmarks
+--require('bookmarks').setup {
+--	keymap = {
+--		toggle = "<tab><tab>", -- toggle bookmarks
+--		add = "\\z", -- add bookmarks
+--		jump = "<CR>", -- jump from bookmarks
+--		delete = "dd", -- delete bookmarks
+--		order = "<space><space>", -- order bookmarks by frequency or updated_time
+--	},
+--	width = 0.8, -- bookmarks window width:  (0, 1]
+--	height = 0.6, -- bookmarks window height: (0, 1]
+--	preview_ratio = 0.4, -- bookmarks preview window ratio (0, 1]
+--	hl_cursorline = "guibg=Gray guifg=White" -- hl bookmarsk window cursorline
+--}
 
 -- Treesitter configuration
 require('nvim-treesitter.configs').setup {
