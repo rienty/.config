@@ -18,13 +18,13 @@ local options = {
 	shiftwidth = 4,
 	updatetime = 300, -- faster completion (4000ms default).
 	writebackup = false, -- if a file is being edited by another program.
-	laststatus = 2,  -- show the line bar if 2, not show if 0.
+	laststatus = 2, -- show the line bar if 2, not show if 0.
 	cursorline = true, -- highlight the current line.
 	number = true, -- set numbered lines.
 	relativenumber = true, -- set relative numbered lines.
 	spell = true, -- check spell.
 	numberwidth = 2, -- set number column width to 2 {default 4}.
-	signcolumn = "yes", -- always show the sign column. 
+	signcolumn = "yes", -- always show the sign column.
 	wrap = true, -- display lines as one long line.
 	scrolloff = 8,
 	sidescrolloff = 8,
@@ -103,6 +103,8 @@ vim.cmd [[au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe 
 -- Packer init
 require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
+	use 'crusj/bookmarks.nvim'
+	use 'kyazdani42/nvim-web-devicons'
 	use 'phaazon/hop.nvim'
 	use 'nvim-lua/plenary.nvim'
 	use 'lewis6991/gitsigns.nvim'
@@ -159,6 +161,21 @@ require('gitsigns').setup {
 		topdelete = { text = '‾' },
 		changedelete = { text = '~' },
 	},
+}
+
+--Bookmarks
+require('bookmarks').setup {
+	keymap = {
+		toggle = "<tab><tab>", -- toggle bookmarks
+		add = "\\z", -- add bookmarks
+		jump = "<CR>", -- jump from bookmarks
+		delete = "dd", -- delete bookmarks
+		order = "<space><space>", -- order bookmarks by frequency or updated_time
+	},
+	width = 0.8, -- bookmarks window width:  (0, 1]
+	height = 0.6, -- bookmarks window height: (0, 1]
+	preview_ratio = 0.4, -- bookmarks preview window ratio (0, 1]
+	hl_cursorline = "guibg=Gray guifg=White" -- hl bookmarsk window cursorline
 }
 
 -- Treesitter configuration
@@ -354,6 +371,8 @@ require('lspconfig').clangd.setup {
 }
 
 require('lspconfig').bashls.setup {
+	cmd = { "bash-language-server", "start" },
+	filetype = { "sh" },
 	capabilities = capabilities,
 	on_attach = on_attach,
 	flags = lsp_flags
@@ -384,5 +403,3 @@ keymap("n", "<LEADER>fb", ":Telescope current_buffer_fuzzy_find<CR>", opts)
 keymap("n", "<LEADER>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<LEADER>fc", ":Telescope commands<CR>", opts)
 keymap("n", "<LEADER>fl", ":Telescope live_grep<CR>", opts)
-
-

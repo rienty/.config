@@ -329,6 +329,7 @@ c.colors.tabs.pinned.selected.odd.bg = c.colors.tabs.pinned.selected.even.bg
 c.colors.tabs.pinned.selected.odd.fg = c.colors.tabs.selected.odd.fg
 
 config.bind(',p', 'spawn --userscript qute-pass --dmenu-invocation dmenu')
+config.bind(',d', 'spawn --userscript getbib')
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 # c.colors.webpage.bg = bg4

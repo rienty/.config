@@ -16,7 +16,7 @@ super + d
 super + e
     ~/scripts/dmenu-pdf.sh
 
-super + u
+super + i
 	~/scripts/dmenu-wifi.sh
 
 super + a
@@ -32,11 +32,12 @@ super + w
 	~/scripts/dmenu-websearch.sh 
 
 super + @space
-	~/scripts/switch.sh
+	~/scripts/switch.sh 
+
 super + z
 	~/scripts/dmenu-power.sh
 
-super + i
+super + u
 	~/scripts/dmenu-kill-process.sh 
 
 super + n
@@ -48,6 +49,8 @@ super + q
 super + shift + c
 	~/scripts/close-tmux.sh
 
+super + shift + @space
+    ~/scripts/bar.sh
 #
 # bspwm hotkeys
 #
@@ -62,7 +65,7 @@ super + c
 
 # alternate between the tiled and monocle layout
 super + m
-	bspc desktop -l next
+	~/scripts/layout-switch.sh	
 
 # swap the current node and the biggest window
 super + g
@@ -70,7 +73,8 @@ super + g
 
 
 # set the window state
-super + {b,f,v}
+
+super + {v,f,b}
 	bspc node -t {tiled,floating,fullscreen}
 
 #
@@ -87,8 +91,7 @@ super + {_,shift + }o
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
-
+	bspc {desktop -f,node -d} '^{1-9,10}' && bash ~/scripts/switch-destop.sh
 #
 # move/resize
 #
