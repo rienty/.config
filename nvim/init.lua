@@ -103,8 +103,8 @@ vim.cmd [[au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe 
 -- Packer init
 require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
---	use 'crusj/bookmarks.nvim'
---	use 'kyazdani42/nvim-web-devicons'
+	--	use 'crusj/bookmarks.nvim'
+	--	use 'kyazdani42/nvim-web-devicons'
 	use 'phaazon/hop.nvim'
 	use 'nvim-lua/plenary.nvim'
 	use 'lewis6991/gitsigns.nvim'
@@ -240,7 +240,10 @@ cmp.setup({
 			luasnip.lsp_expand(args.body)
 		end,
 	},
-	window = {},
+	window = {
+	--	completion = cmp.config.window.bordered(),
+	--	documentation = cmp.config.window.bordered(),
+	},
 	formatting = {
 		fields = { 'menu', 'abbr' },
 		format = function(entry, item)

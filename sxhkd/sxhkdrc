@@ -25,6 +25,15 @@ super + a
 super + s
 	~/scripts/backlight-up.sh
 
+super + shift + a
+	~/scripts/vol-down.sh
+
+super + shift + s
+	~/scripts/vol-up.sh
+	
+super + shift + m
+	~/scripts/vol-toggle.sh
+	
 super + y
 	~/scripts/clipmenu.sh
 

@@ -11,6 +11,12 @@ settings:
       normal:
         ',d': spawn --userscript getbib
         ',p': spawn --userscript qute-pass --dmenu-invocation dmenu
+  colors.tabs.bar.bg:
+    global: '#689d6a'
+  colors.tabs.even.bg:
+    global: '#689d6a'
+  content.notifications.enabled:
+    https://www.reddit.com: true
   content.proxy:
     global: socks://localhost:1080
   fonts.default_family:
