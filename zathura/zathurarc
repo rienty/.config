@@ -20,7 +20,7 @@ set selection-clipboard clipboard
 
 # zathurarc-dark
 
-set font "GohuFont Nerd Font 16"
+set font "Source Code Pro 15"
 
 set notification-error-bg       "#282828" # bg
 set notification-error-fg       "#fb4934" # bright:red

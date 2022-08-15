@@ -126,6 +126,7 @@ require('packer').startup(function(use)
 	use 'rienty/friendly-snippets'
 	use 'nvim-telescope/telescope.nvim'
 	use 'nvim-telescope/telescope-fzf-native.nvim'
+	use 'MattesGroeger/vim-bookmarks'
 end)
 
 --Set statusbar
@@ -162,21 +163,6 @@ require('gitsigns').setup {
 		changedelete = { text = '~' },
 	},
 }
-
-----Bookmarks
---require('bookmarks').setup {
---	keymap = {
---		toggle = "<tab><tab>", -- toggle bookmarks
---		add = "\\z", -- add bookmarks
---		jump = "<CR>", -- jump from bookmarks
---		delete = "dd", -- delete bookmarks
---		order = "<space><space>", -- order bookmarks by frequency or updated_time
---	},
---	width = 0.8, -- bookmarks window width:  (0, 1]
---	height = 0.6, -- bookmarks window height: (0, 1]
---	preview_ratio = 0.4, -- bookmarks preview window ratio (0, 1]
---	hl_cursorline = "guibg=Gray guifg=White" -- hl bookmarsk window cursorline
---}
 
 -- Treesitter configuration
 require('nvim-treesitter.configs').setup {
@@ -241,8 +227,8 @@ cmp.setup({
 		end,
 	},
 	window = {
-	--	completion = cmp.config.window.bordered(),
-	--	documentation = cmp.config.window.bordered(),
+		--	completion = cmp.config.window.bordered(),
+		--	documentation = cmp.config.window.bordered(),
 	},
 	formatting = {
 		fields = { 'menu', 'abbr' },

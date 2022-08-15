@@ -16,6 +16,9 @@ super + d
 super + e
     ~/scripts/dmenu-pdf.sh
 
+super + w
+	~/scripts/dmenu-websearch.sh 
+
 super + i
 	~/scripts/dmenu-wifi.sh
 
@@ -37,9 +40,9 @@ super + shift + m
 super + y
 	~/scripts/clipmenu.sh
 
-super + w
-	~/scripts/dmenu-websearch.sh 
-
+super +shift +w	
+	~/scripts/wp-change.sh
+	
 super + @space
 	~/scripts/switch.sh 
 
@@ -66,7 +69,7 @@ super + shift + @space
 
 # quit/restart bspwm
 super + alt + {q,r}
-	bspc {quit,wm -r}
+	pkill lemonbar && bspc {quit,wm -r} 
 
 # close and kill
 super + c
@@ -74,7 +77,7 @@ super + c
 
 # alternate between the tiled and monocle layout
 super + m
-	~/scripts/layout-switch.sh	
+	bspc desktop -l next && ~/scripts/layout-switch.sh	
 
 # swap the current node and the biggest window
 super + g
@@ -100,7 +103,7 @@ super + {_,shift + }o
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}' && bash ~/scripts/switch-destop.sh
+	bspc {desktop -f,node -d} '^{1-9,10}' && bash ~/scripts/layout-switch.sh
 #
 # move/resize
 #

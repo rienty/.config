@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/ren/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "/home/ren/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/ren/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -113,6 +118,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ren/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
+  ["hop.nvim"] = {
+    loaded = true,
+    path = "/home/ren/.local/share/nvim/site/pack/packer/start/hop.nvim",
+    url = "https://github.com/phaazon/hop.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -169,15 +179,10 @@ _G.packer_plugins = {
     path = "/home/ren/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["vim-autoformat"] = {
+  ["vim-bookmarks"] = {
     loaded = true,
-    path = "/home/ren/.local/share/nvim/site/pack/packer/start/vim-autoformat",
-    url = "https://github.com/vim-autoformat/vim-autoformat"
-  },
-  ["vim-fugitive"] = {
-    loaded = true,
-    path = "/home/ren/.local/share/nvim/site/pack/packer/start/vim-fugitive",
-    url = "https://github.com/tpope/vim-fugitive"
+    path = "/home/ren/.local/share/nvim/site/pack/packer/start/vim-bookmarks",
+    url = "https://github.com/MattesGroeger/vim-bookmarks"
   }
 }
 

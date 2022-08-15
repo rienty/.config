@@ -330,6 +330,8 @@ c.colors.tabs.pinned.selected.odd.fg = c.colors.tabs.selected.odd.fg
 
 config.bind(',p', 'spawn --userscript qute-pass --dmenu-invocation dmenu')
 config.bind(',d', 'spawn --userscript getbib')
+config.bind(',x', 'set content.proxy socks://localhost:1080')
+config.bind(',c', 'set content.proxy system')
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 # c.colors.webpage.bg = bg4

@@ -11,18 +11,46 @@ settings:
       normal:
         ',d': spawn --userscript getbib
         ',p': spawn --userscript qute-pass --dmenu-invocation dmenu
+  colors.statusbar.normal.bg:
+    global: '#689d6a'
+  colors.statusbar.normal.fg:
+    global: '#282828'
   colors.tabs.bar.bg:
     global: '#689d6a'
   colors.tabs.even.bg:
     global: '#689d6a'
+  colors.tabs.selected.even.bg:
+    global: '#689d6a'
+  colors.tabs.selected.even.fg:
+    global: '#282828'
+  colors.tabs.selected.odd.bg:
+    global: '#689d6a'
+  colors.tabs.selected.odd.fg:
+    global: '#282828'
+  content.geolocation:
+    https://www.google.com: true
   content.notifications.enabled:
     https://www.reddit.com: true
   content.proxy:
     global: socks://localhost:1080
+  downloads.location.directory:
+    global: ~/documents/downloads/
   fonts.default_family:
-    global: GohuFont Nerd Font
+    global: Source Code Pro
   fonts.default_size:
-    global: 16pt
+    global: 14pt
+  fonts.web.family.cursive:
+    global: Source Code Pro
+  fonts.web.family.fantasy:
+    global: Source Code Pro
+  fonts.web.family.fixed:
+    global: Source Code Pro
+  fonts.web.family.sans_serif:
+    global: Liberation Sans
+  fonts.web.family.serif:
+    global: Liberation Sans
+  fonts.web.family.standard:
+    global: Source Code Pro
   tabs.favicons.scale:
     global: 0.8
   zoom.default:

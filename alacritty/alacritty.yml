@@ -1,0 +1,18 @@
+font:
+  normal:
+    family: Gohu GohuFont
+    style: Regular
+
+  bold:
+    family: Gohu GohuFont 
+    style: Bold
+
+  italic:
+    family: Gohu GohuFont 
+    style: Italic
+
+  bold_italic:
+    family: Gohu GohuFont 
+    style: Bold Italic
+
+  size: 28
