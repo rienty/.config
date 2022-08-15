@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-~/scripts/lemonbar.sh | lemonbar -g 2536x43+12+12 -f 'Source Code Pro:size=18' -B '#282828' &
+~/scripts/lemonbar.sh | lemonbar -g 2536x43+12+12 -f 'TerminessTTF Nerd Font:size=20' -B '#282828' &
 
 sudo cpupower frequency-set --governor conservative &
 

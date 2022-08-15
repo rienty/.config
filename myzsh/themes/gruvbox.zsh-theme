@@ -49,7 +49,7 @@ prompt_context() {
   # fi
   case "$OSTYPE" in
     darwin*)  OS_LOGO="\ue29e" ;; 
-    linux*)   OS_LOGO="Just do it!" ;;
+    linux*)   OS_LOGO="\u" ;;
   esac
   prompt_segment 6 0 $OS_LOGO
 }
@@ -78,11 +78,11 @@ prompt_git() {
     fi
 
     if [[ -e "${repo_path}/BISECT_LOG" ]]; then
-      mode=" <B>"
+      mode=" \uf670"
     elif [[ -e "${repo_path}/MERGE_HEAD" ]]; then
-      mode=" >M<"
+      mode=" \uf66f"
     elif [[ -e "${repo_path}/rebase" || -e "${repo_path}/rebase-apply" || -e "${repo_path}/rebase-merge" || -e "${repo_path}/../.dotest" ]]; then
-      mode=" >R>"
+      mode=" \uf66c"
     fi
 
     setopt promptsubst
@@ -91,8 +91,8 @@ prompt_git() {
     zstyle ':vcs_info:*' enable git
     zstyle ':vcs_info:*' get-revision true
     zstyle ':vcs_info:*' check-for-changes true
-    zstyle ':vcs_info:*' stagedstr '+'
-    zstyle ':vcs_info:*' unstagedstr 'O '
+    zstyle ':vcs_info:*' stagedstr '\uf0fe  '
+    zstyle ':vcs_info:*' unstagedstr '\uf144  '
     zstyle ':vcs_info:*' formats ' %u%c'
     zstyle ':vcs_info:*' actionformats ' %u%c'
     vcs_info

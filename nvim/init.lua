@@ -65,7 +65,7 @@ function SetKeybinds()
 	--	if vim.bo.filetype == 'tex' then
 	keymap("i", ",g", "<esc>/<++><CR>:nohlsearch<CR>c4l", opts)
 	keymap("i", ",r", "$ <--> $<++><esc>?<--><CR>N:nohlsearch<CR>c4l", opts)
-	keymap("i", ",t", "$$ <--> $$<++><esc>?<--><CR>N:nohlsearch<CR>c4l", opts)
+	keymap("i", ",t", "\\[ <--> \\]<++><esc>?<--><CR>N:nohlsearch<CR>c4l", opts)
 	keymap("i", "_", "_{<-->}<++><esc>?<--><CR>N:nohlsearch<CR>di{i", opts)
 	keymap("i", "^", "^{<-->}<++><esc>?<--><CR>N:nohlsearch<CR>di{i", opts)
 	keymap("i", ",c", "<esc>:w<CR>:TexlabBuild<CR>a", opts)
