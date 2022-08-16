@@ -1,17 +1,35 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-
+#Export global variable
 export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 export PATH=/usr/local/texlive/2022/bin/x86_64-linux:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR='nvim'
 export ZSH="$HOME/.config/myzsh"
 
+# Load all stock functions (from $fpath files) called below.
+autoload -U compaudit compinit
+# Save the location of the current completion dump file.
+if [[ -z "$ZSH_COMPDUMP" ]]; then
+  ZSH_COMPDUMP="${ZDOTDIR:-$HOME}/.zcompdump-${ZSH_VERSION}"
+fi
+compinit -u -d "$ZSH_COMPDUMP"
+
+unset zcompdump_revision zcompdump_fpath zcompdump_refresh
+
+for config_file ("$ZSH"/lib/*.zsh); do
+  source "$config_file"
+done
+
 plugins=(git sudo colorize fzf zsh-completions zsh-autosuggestions zsh-syntax-highlighting zsh-autopair fzf-tab-completion)
 
-source $ZSH/oh-my-zsh.sh
+# Load all of the plugins 
+for plugin ($plugins); do
+  if [[ -f "$ZSH/plugins/$plugin/$plugin.plugin.zsh" ]]; then
+    source "$ZSH/plugins/$plugin/$plugin.plugin.zsh"
+  fi
+done
+unset plugin
+
 source $ZSH/themes/gruvbox.zsh
 # Alias
 alias px='proxychains4'
@@ -60,4 +78,3 @@ bindkey '' vi-backward-char
 bindkey '^P' up-line-or-history
 bindkey '^N' down-line-or-history
 
-#bindkey -v
