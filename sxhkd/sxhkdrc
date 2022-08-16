@@ -62,7 +62,7 @@ super + shift + c
 	~/scripts/close-tmux.sh
 
 super + shift + @space
-    ~/scripts/bar.sh
+    ~/scripts/switch-pdf.sh
 #
 # bspwm hotkeys
 #

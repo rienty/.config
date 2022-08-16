@@ -48,8 +48,8 @@ prompt_context() {
     # prompt_segment 237 7 "%(!.%{%F{3}%}.)%n@%m"
   # fi
   case "$OSTYPE" in
-    darwin*)  OS_LOGO="\ue29e" ;; 
-    linux*)   OS_LOGO="\u" ;;
+    darwin*)  OS_LOGO="\ue29e  " ;; 
+    linux*)   OS_LOGO="\uf303  " ;;
   esac
   prompt_segment 6 0 $OS_LOGO
 }
@@ -91,8 +91,8 @@ prompt_git() {
     zstyle ':vcs_info:*' enable git
     zstyle ':vcs_info:*' get-revision true
     zstyle ':vcs_info:*' check-for-changes true
-    zstyle ':vcs_info:*' stagedstr '\uf0fe  '
-    zstyle ':vcs_info:*' unstagedstr '\uf144  '
+    zstyle ':vcs_info:*' stagedstr "\uf0fe  "
+    zstyle ':vcs_info:*' unstagedstr "\uf144  "
     zstyle ':vcs_info:*' formats ' %u%c'
     zstyle ':vcs_info:*' actionformats ' %u%c'
     vcs_info
@@ -160,7 +160,7 @@ prompt_hg() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment 4 $CURRENT_FG '%~'
+  prompt_segment 4 $CURRENT_FG '\ue5fe  %~'
 }
 
 # Virtualenv: current working virtualenv
