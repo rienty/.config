@@ -9,12 +9,10 @@ export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR='nvim'
 export ZSH="$HOME/.config/myzsh"
 
-ZSH_THEME="gruvbox"
-
 plugins=(git sudo colorize fzf zsh-completions zsh-autosuggestions zsh-syntax-highlighting zsh-autopair fzf-tab-completion)
 
 source $ZSH/oh-my-zsh.sh
-
+source $ZSH/themes/gruvbox.zsh
 # Alias
 alias px='proxychains4'
 alias ne='clear && echo "\n" && neofetch --ascii_distro Linux'

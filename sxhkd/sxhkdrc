@@ -7,8 +7,10 @@ super + Return
  	st
 
 super + shift + Return
-	~/scripts/st.sh
+	bspc rule -a \* -o state=floating sticky=on layer=above rectangle=2060x1200+250+120 && st
 
+super + ctrl + Return
+	~/scripts/st.sh
 # program launcher
 super + d
 	~/scripts/dmenu.sh
@@ -77,7 +79,8 @@ super + c
 
 # alternate between the tiled and monocle layout
 super + m
-	bspc desktop -l next && ~/scripts/layout-switch.sh	
+	bspc desktop -l next 
+#&& ~/scripts/layout-switch.sh	
 
 # swap the current node and the biggest window
 super + g
@@ -103,7 +106,8 @@ super + {_,shift + }o
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}' && bash ~/scripts/layout-switch.sh
+	bspc {desktop -f,node -d} '^{1-9,10}'
+#&& bash ~/scripts/layout-switch.sh
 #
 # move/resize
 #
