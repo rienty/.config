@@ -32,7 +32,7 @@ settings:
   content.notifications.enabled:
     https://www.reddit.com: true
   content.proxy:
-    global: socks://localhost:1080
+    global: system
   downloads.location.directory:
     global: ~/documents/downloads/
   fonts.default_family:

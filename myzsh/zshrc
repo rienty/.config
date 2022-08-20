@@ -18,13 +18,13 @@ setopt appendhistory
 autoload -U compaudit compinit
 compinit -u -C -d "${ZSH_COMPDUMP}"
 
-# Add all defined plugins to fpath. This must be done before running compinit.
-for plugin ($plugins); do
-	fpath=($ZSH/plugins/$plugin $fpath)
-done
-
 # Load all of the plugins
 plugins=(git sudo colorize fzf zsh-completions zsh-autosuggestions zsh-syntax-highlighting zsh-autopair fzf-tab-completion)
+
+# Add all defined plugins to fpath. This must be done before running compinit.
+for plug ($plugins); do
+	fpath=($ZSH/plugins/$plug $fpath)
+done
 
 for plugin ($plugins); do
 	if [ -f $ZSH/plugins/$plugin/$plugin.plugin.zsh ]; then
@@ -34,7 +34,8 @@ done
 
 # Load theme
 source "$ZSH/themes/git.zsh"
-source "$ZSH/themes/ren.zsh-theme"
+source "$ZSH/themes/theme-and-appearance.zsh"
+source "$ZSH/themes/gruvbox.zsh"
 
 # Config fzf-tab-completion
 export FZF_COMPLETION_TRIGGER='f'

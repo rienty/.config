@@ -6,8 +6,8 @@
 super + Return
  	st
 
-super + shift + Return
-	bspc rule -a \* -o state=floating sticky=on layer=above rectangle=2060x1200+250+120 && st
+super + f
+	bspc rule -a \* -o state=floating sticky=on layer=above rectangle=2000x1200+280+230 && st
 
 super + ctrl + Return
 	~/scripts/st.sh
@@ -45,7 +45,7 @@ super + y
 super +shift +w	
 	~/scripts/wp-change.sh
 	
-super + @space
+super + shift + @space
 	~/scripts/switch.sh 
 
 super + z
@@ -63,7 +63,7 @@ super + q
 super + shift + c
 	~/scripts/close-tmux.sh
 
-super + shift + @space
+super + @space
     ~/scripts/switch-pdf.sh
 #
 # bspwm hotkeys
@@ -83,13 +83,13 @@ super + m
 #&& ~/scripts/layout-switch.sh	
 
 # swap the current node and the biggest window
-super + g
+super + ctrl + Enter
 	bspc node -s biggest.window
 
 
 # set the window state
 
-super + {v,f,b}
+super + {v,g,b}
 	bspc node -t {tiled,floating,fullscreen}
 
 #
