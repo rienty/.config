@@ -30,9 +30,12 @@ settings:
   content.geolocation:
     https://www.google.com: true
   content.notifications.enabled:
+    https://m1.mail.sina.com.cn: true
     https://www.reddit.com: true
   content.proxy:
     global: system
+  content.register_protocol_handler:
+    https://outlook.live.com?mailtouri=%25s: true
   downloads.location.directory:
     global: ~/documents/downloads/
   fonts.default_family:
