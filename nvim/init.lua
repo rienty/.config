@@ -130,7 +130,7 @@ require('packer').startup(function(use)
 end)
 
 -- colorscheme config
-vim.cmd [[colorscheme gruvbox]]
+vim.cmd [[colorscheme zellner]]
 
 -- Hop config
 require('hop').setup { keys = 'etovxqpdygfblzhckisuran' }
