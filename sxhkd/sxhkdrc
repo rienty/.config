@@ -71,7 +71,7 @@ super + @space
 
 # quit/restart bspwm
 super + alt + {q,r}
-	pkill lemonbar && bspc {quit,wm -r} 
+	bspc {quit,wm -r} 
 
 # close and kill
 super + c
