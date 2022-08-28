@@ -26,5 +26,4 @@ bspc config top_padding         0
 
 bspc rule -a Zathura state=tiled 
 
-bspc rule -d '^9' state=monocle
 
