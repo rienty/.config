@@ -18,7 +18,7 @@ local options = {
 	shiftwidth = 4,
 	updatetime = 300, -- faster completion (4000ms default).
 	writebackup = false, -- if a file is being edited by another program.
-	laststatus = 2, -- show the line bar if 2, not show if 0.
+	laststatus = 0, -- show the line bar if 2, not show if 0.
 	cursorline = true, -- highlight the current line.
 	number = true, -- set numbered lines.
 	relativenumber = true, -- set relative numbered lines.
@@ -30,7 +30,7 @@ local options = {
 	sidescrolloff = 8,
 	breakindent = true,
 	termguicolors = true,
-	background = "dark",
+	background = "light",
 }
 
 for k, v in pairs(options) do
@@ -91,7 +91,7 @@ function SetKeybinds()
 	keymap("i", ".I", "\\infty", opts)
 	keymap("i", ".R", "\\Ric", opts)
 	keymap("i", ".S", "\\sec", opts)
-	keymap("i", ".v", "\\vol", opts)
+	keymap("i", ".o", "\\to", opts)
 	--	end
 end
 
@@ -128,16 +128,6 @@ require('packer').startup(function(use)
 	use 'nvim-telescope/telescope-fzf-native.nvim'
 	use 'MattesGroeger/vim-bookmarks'
 end)
-
---Set statusbar
-require('lualine').setup {
-	options = {
-		icons_enabled = false,
-		theme = 'gruvbox',
-		component_separators = '|',
-		section_separators = '|',
-	},
-}
 
 -- colorscheme config
 vim.cmd [[colorscheme gruvbox]]

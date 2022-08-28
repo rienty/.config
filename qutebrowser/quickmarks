@@ -5,7 +5,7 @@ git https://github.com/
 su https://suckless.org/
 wi https://en.wikipedia.org/wiki/Main_Page
 ar https://arxiv.org/search/advanced
-bl https://www.bilibili.com/?spm_id_from=666.4.b_7072696d61727950616765546162.1
+bl https://www.bilibili.com/anime/?spm_id_from=333.1007.0.0
 ba https://www.baidu.com/
 bo https://b-ok.org/
 vp https://portal.thestack.net/clientarea.php?action=services
@@ -25,3 +25,5 @@ wb http://localhost:1313/
 sina https://m1.mail.sina.com.cn/classic/index.php#action=maillist&fid=new&title=%25E6%2594%25B6%25E4%25BB%25B6%25E5%25A4%25B9&pagecount=0&pageno=1&order=htime&sorttype=desc&type=0&tag=-1
 icld https://www.icloud.com.cn/mail/
 mx http://www.m.volmoe.com/
+reddit https://www.reddit.com/
+rd https://www.reddit.com/

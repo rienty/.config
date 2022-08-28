@@ -30,11 +30,13 @@ settings:
   content.geolocation:
     https://www.google.com: true
   content.notifications.enabled:
+    https://blog.csdn.net: true
     https://m1.mail.sina.com.cn: true
     https://www.reddit.com: true
   content.proxy:
-    global: system
+    global: socks://localhost:1080
   content.register_protocol_handler:
+    https://mail.google.com?extsrc=mailto&url=%25s: true
     https://outlook.live.com?mailtouri=%25s: true
   downloads.location.directory:
     global: ~/documents/downloads/
