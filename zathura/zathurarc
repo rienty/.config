@@ -45,8 +45,8 @@ set index-active-fg             "#504945" # bg2
 set inputbar-bg                 "#282828" # bg
 set inputbar-fg                 "#ebdbb2" # fg
 
-set statusbar-bg                "#689d6a" # bg2
-set statusbar-fg                "#3c3836" # fg
+set statusbar-bg                "#c3c3c3" # bg2
+set statusbar-fg                "#282828" # fg
 
 set highlight-color             "#fabd2f" # bright:yellow
 set highlight-active-color      "#fe8019" # bright:orange
@@ -59,8 +59,8 @@ set render-loading-fg           "#ebdbb2" # fg
 
 # Recolor book content's color
 set recolor-darkcolor          "#282828" # bg
-set recolor-lightcolor           "#fbf1c7" # fg
-#set recolor                     "true"
+set recolor-lightcolor           "#e6e6e6" # fg
+set recolor                     "true"
 # set recolor-keephue             true      # keep original color
 set synctex true
 set synctex-editor-command "nvr --remote-silent +%{line} %{input}"
