@@ -92,6 +92,8 @@ function SetKeybinds()
 	keymap("i", ".R", "\\Ric", opts)
 	keymap("i", ".S", "\\sec", opts)
 	keymap("i", ".o", "\\to", opts)
+	keymap("i", ".v", "\\vol", opts)
+	keymap("i", ".l", "\\partial", opts)
 	--	end
 end
 

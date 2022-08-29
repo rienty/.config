@@ -35,7 +35,7 @@ done
 # Load theme
 source "$ZSH/themes/git.zsh"
 source "$ZSH/themes/theme-and-appearance.zsh"
-source "$ZSH/themes/gruvbox.zsh"
+source "$ZSH/themes/ren.zsh"
 
 # Config fzf-tab-completion
 export FZF_COMPLETION_TRIGGER='f'
@@ -71,6 +71,8 @@ alias lg='lazygit'
 alias vs='vim ~/.config/sxhkd/sxhkdrc'
 alias vb='vim ~/.config/bspwm/bspwmrc'
 alias cl='rm -rf ~/.cache ~/.local/share/qutebrowser/webengine/Local\ Storage ~/.local/share/qutebrowser/webengine/Service\ Worker ~/.local/share/qutebrowser/webengine/GPUCache ~/.dbus'
+alias ln='pkill lemonbar && bspc config top_padding 0'
+alias lm='~/scripts/lemonbar.sh | lemonbar -g 2536x43+12+12 -f 'TerminessTTF Nerd Font:size=20' -B '#ffffff' & && bspc config top_padding         55'
 # Colorized man
 man() {
 	LESS_TERMCAP_md=$'\e[01;31m' \
