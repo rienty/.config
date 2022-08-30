@@ -45,7 +45,7 @@ set index-active-fg             "#504945" # bg2
 set inputbar-bg                 "#282828" # bg
 set inputbar-fg                 "#ebdbb2" # fg
 
-set statusbar-bg                "#c3c3c3" # bg2
+set statusbar-bg                "#ffffff" # bg2
 set statusbar-fg                "#282828" # fg
 
 set highlight-color             "#fabd2f" # bright:yellow
@@ -59,7 +59,7 @@ set render-loading-fg           "#ebdbb2" # fg
 
 # Recolor book content's color
 set recolor-darkcolor          "#282828" # bg
-set recolor-lightcolor           "#e6e6e6" # fg
+set recolor-lightcolor           "#fafafa" # fg
 set recolor                     "true"
 # set recolor-keephue             true      # keep original color
 set synctex true
